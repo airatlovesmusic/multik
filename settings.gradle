@@ -1,0 +1,5 @@
+include ':base'
+include ':feature2'
+include ':feature1'
+include ':app'
+rootProject.name = "Multik"
