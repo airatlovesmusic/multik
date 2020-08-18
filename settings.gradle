@@ -1,5 +1,7 @@
-include ':base'
-include ':feature2'
-include ':feature1'
+include ':data'
+include ':model'
+include ':global'
+include ':features:feature-article'
+include ':features:feature-articles'
 include ':app'
 rootProject.name = "Multik"

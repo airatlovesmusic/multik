@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/airatlovesmusic/samples/Multik/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-lv/values-lv.xml",
+            "outputFile": "/Users/airatlovesmusic/multik/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-lv/values-lv.xml",
             "map": [
                 {
                     "source": "/Users/airatlovesmusic/.gradle/caches/transforms-2/files-2.1/4e039017508058e03141616af225b4eb/appcompat-1.2.0/res/values-lv/values-lv.xml",

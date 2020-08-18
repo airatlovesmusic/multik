@@ -1,16 +1,20 @@
 package com.airatlovesmusic.multik.ui
 
-import android.app.Application
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.airatlovesmusic.base.BaseApplication
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentTransaction
+import com.airatlovesmusic.global.base.BaseFragment
 import com.airatlovesmusic.multik.App
 import com.airatlovesmusic.multik.R
-import com.airatlovesmusic.multik.data.network.ApiService
-import com.airatlovesmusic.multik.di.components.DaggerAppActivityComponent
-import com.airatlovesmusic.multik.di.modules.NavigationModule
+import com.airatlovesmusic.multik.Screens
+import ru.terrakok.cicerone.Navigator
 import ru.terrakok.cicerone.NavigatorHolder
 import ru.terrakok.cicerone.Router
+import ru.terrakok.cicerone.android.support.SupportAppNavigator
+import ru.terrakok.cicerone.commands.BackTo
+import ru.terrakok.cicerone.commands.Command
+import ru.terrakok.cicerone.commands.Replace
 import javax.inject.Inject
 
 /**
@@ -25,17 +29,46 @@ class AppActivity: AppCompatActivity() {
     @Inject
     lateinit var router: Router
 
-    @Inject
-    lateinit var apiService: ApiService
+    private val currentFragment: BaseFragment<*>?
+        get() = supportFragmentManager.findFragmentById(R.id.container) as? BaseFragment<*>
+
+    private val navigator: Navigator = object : SupportAppNavigator(this, supportFragmentManager, R.id.container) {
+        override fun setupFragmentTransaction(
+            command: Command,
+            currentFragment: Fragment?,
+            nextFragment: Fragment?,
+            fragmentTransaction: FragmentTransaction
+        ) {
+            fragmentTransaction.setReorderingAllowed(true)
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        DaggerAppActivityComponent.builder()
-            .appComponent(App.appComponent)
-            .appNavigationModule(NavigationModule())
-            .build()
-            .inject(this)
+        (application as App).appComponent.inject(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.layout_container)
+        if (savedInstanceState == null) {
+            navigator.applyCommands(
+                arrayOf(
+                    BackTo(null),
+                    Replace(Screens.Articles)
+                )
+            )
+        }
+    }
+
+    override fun onResumeFragments() {
+        super.onResumeFragments()
+        navigatorHolder.setNavigator(navigator)
+    }
+
+    override fun onPause() {
+        navigatorHolder.removeNavigator()
+        super.onPause()
+    }
+
+    override fun onBackPressed() {
+        currentFragment?.onBackPressed() ?: super.onBackPressed()
     }
 
 }
