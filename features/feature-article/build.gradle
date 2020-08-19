@@ -29,15 +29,13 @@ dependencies {
     implementation project(":global")
     implementation project(":model")
     implementation fileTree(dir: "libs", include: ["*.jar"])
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation 'androidx.core:core-ktx:1.3.1'
-    implementation 'androidx.appcompat:appcompat:1.2.0'
-    testImplementation 'junit:junit:4.13'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-    // dagger
-    implementation "com.google.dagger:dagger:$dagger"
-    kapt "com.google.dagger:dagger-compiler:$dagger"
-    // viewmodel
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.0-alpha06"
+    implementation deps.external.kotlin_stdlib
+    implementation deps.androidx.core
+    implementation deps.androidx.appcompat
+    testImplementation deps.test.junit
+    androidTestImplementation deps.test.androidx_test_junit
+    androidTestImplementation deps.test.espresso_core
+    implementation deps.external.dagger
+    kapt deps.external.dagger_kapt
+    kapt deps.external.viewmodel_ktx
 }
