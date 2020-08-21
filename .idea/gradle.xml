@@ -13,10 +13,15 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/core-network-api" />
+            <option value="$PROJECT_DIR$/core-network-impl" />
             <option value="$PROJECT_DIR$/data" />
             <option value="$PROJECT_DIR$/features" />
             <option value="$PROJECT_DIR$/features/feature-article" />
+            <option value="$PROJECT_DIR$/features/feature-article-api" />
+            <option value="$PROJECT_DIR$/features/feature-article-impl" />
             <option value="$PROJECT_DIR$/features/feature-articles" />
+            <option value="$PROJECT_DIR$/features/features-adapter" />
             <option value="$PROJECT_DIR$/global" />
             <option value="$PROJECT_DIR$/model" />
           </set>
