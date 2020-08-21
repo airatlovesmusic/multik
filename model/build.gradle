@@ -28,3 +28,6 @@ dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation deps.external.kotlin_stdlib
 }
+repositories {
+    mavenCentral()
+}

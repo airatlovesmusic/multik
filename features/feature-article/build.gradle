@@ -39,3 +39,6 @@ dependencies {
     kapt deps.external.dagger_kapt
     implementation deps.external.viewmodel_ktx
 }
+repositories {
+    mavenCentral()
+}

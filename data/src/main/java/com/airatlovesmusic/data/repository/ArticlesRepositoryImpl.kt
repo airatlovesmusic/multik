@@ -7,6 +7,8 @@ import javax.inject.Inject
 class ArticlesRepositoryImpl @Inject constructor(
     private val api: ApiService
 ): ArticlesRepository {
-    override fun getArticles() = api.getArticles()
-    override fun getArticle(url: String) = api.getArticle(url)
+    override suspend fun getArticles() =
+        api.getArticles()
+    override suspend fun getArticle(url: String) =
+        api.getArticles().firstOrNull { it.url == url }
 }

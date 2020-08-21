@@ -4,11 +4,11 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 30
 
     defaultConfig {
         minSdkVersion 23
-        targetSdkVersion 29
+        targetSdkVersion 30
         versionCode 1
         versionName "1.0"
 
@@ -39,4 +39,7 @@ dependencies {
     implementation deps.external.dagger
     kapt deps.external.dagger_kapt
     implementation deps.external.viewmodel_ktx
+}
+repositories {
+    mavenCentral()
 }

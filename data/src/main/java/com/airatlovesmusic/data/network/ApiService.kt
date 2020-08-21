@@ -1,9 +1,9 @@
 package com.airatlovesmusic.data.network
 
 import com.airatlovesmusic.model.Article
+import retrofit2.http.GET
 
 interface ApiService {
-
-    fun getArticles(): List<Article>
-    fun getArticle(url: String): Article?
+    @GET("multik/master/articles.json")
+    suspend fun getArticles(): List<Article>
 }

@@ -42,3 +42,6 @@ dependencies {
     implementation deps.external.retrofit_gson_adapter
     implementation deps.external.retrofit_coroutines_adapter
 }
+repositories {
+    mavenCentral()
+}
