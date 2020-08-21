@@ -37,5 +37,5 @@ dependencies {
     androidTestImplementation deps.test.espresso_core
     implementation deps.external.dagger
     kapt deps.external.dagger_kapt
-    kapt deps.external.viewmodel_ktx
+    implementation deps.external.viewmodel_ktx
 }
