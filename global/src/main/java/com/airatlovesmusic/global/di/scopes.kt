@@ -6,9 +6,6 @@ import javax.inject.Scope
 annotation class ApplicationScope
 
 @Scope
-annotation class ActivityScope
-
-@Scope
 annotation class PerFeature
 
 @Scope

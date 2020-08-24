@@ -8,6 +8,7 @@ import com.airatlovesmusic.global.base.BaseFragment
 import com.airatlovesmusic.multik.App
 import com.airatlovesmusic.multik.R
 import com.airatlovesmusic.multik.Screens
+import com.airatlovesmusic.multik.di.AppComponent
 import ru.terrakok.cicerone.Navigator
 import ru.terrakok.cicerone.NavigatorHolder
 import ru.terrakok.cicerone.Router
@@ -29,8 +30,8 @@ class AppActivity: AppCompatActivity() {
     @Inject
     lateinit var router: Router
 
-    private val currentFragment: BaseFragment<*>?
-        get() = supportFragmentManager.findFragmentById(R.id.container) as? BaseFragment<*>
+    private val currentFragment: BaseFragment?
+        get() = supportFragmentManager.findFragmentById(R.id.container) as? BaseFragment
 
     private val navigator: Navigator = object : SupportAppNavigator(this, supportFragmentManager, R.id.container) {
         override fun setupFragmentTransaction(
@@ -43,15 +44,19 @@ class AppActivity: AppCompatActivity() {
         }
     }
 
+    private val appComponent by lazy {
+        AppComponent.Starter.start(application as App)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
-        (application as App).appComponent.inject(this)
+        appComponent.inject(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.layout_container)
         if (savedInstanceState == null) {
             navigator.applyCommands(
                 arrayOf(
                     BackTo(null),
-                    Replace(Screens.Articles)
+                    Replace(Screens.Main)
                 )
             )
         }

@@ -1,4 +1,6 @@
-include ':data'
+include ':features:mainscreen'
+include ':network'
+include ':repo'
 include ':model'
 include ':global'
 include ':features:feature-article'

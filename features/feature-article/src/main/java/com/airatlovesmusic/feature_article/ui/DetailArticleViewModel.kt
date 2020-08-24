@@ -3,7 +3,6 @@ package com.airatlovesmusic.feature_article.ui
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.airatlovesmusic.global.base.BaseViewModel
-import com.airatlovesmusic.global.interfaces.AppRouter
 import com.airatlovesmusic.global.interfaces.ArticlesRepository
 import com.airatlovesmusic.model.Article
 import kotlinx.coroutines.Dispatchers
@@ -12,7 +11,7 @@ import javax.inject.Inject
 
 class DetailArticleViewModel @Inject constructor(
     private val articlesRepository: ArticlesRepository,
-    private val router: AppRouter,
+    private val router: ArticleRouter,
     private val url: String
 ): BaseViewModel() {
 

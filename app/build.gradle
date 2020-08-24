@@ -25,9 +25,9 @@ android {
 }
 
 dependencies {
-    implementation project (":data")
+    implementation project (":repo")
     implementation project (":global")
-    implementation project (':features:feature-articles')
+    implementation project (':features:mainscreen')
     implementation project (':features:feature-article')
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation deps.external.kotlin_stdlib

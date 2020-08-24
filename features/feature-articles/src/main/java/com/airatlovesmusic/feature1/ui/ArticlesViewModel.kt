@@ -3,7 +3,7 @@ package com.airatlovesmusic.feature1.ui
 import androidx.lifecycle.MutableLiveData
 import com.airatlovesmusic.global.base.BaseViewModel
 import androidx.lifecycle.viewModelScope
-import com.airatlovesmusic.global.interfaces.AppRouter
+import com.airatlovesmusic.global.data.system.FlowRouter
 import com.airatlovesmusic.global.interfaces.ArticlesRepository
 import com.airatlovesmusic.model.Article
 import kotlinx.coroutines.Dispatchers
@@ -12,7 +12,7 @@ import javax.inject.Inject
 
 class ArticlesViewModel @Inject constructor(
     private val articlesRepository: ArticlesRepository,
-    private val router: AppRouter
+    private val router: ArticlesRouter
 ): BaseViewModel() {
 
     val list = MutableLiveData<List<Article>>().apply {
@@ -21,11 +21,8 @@ class ArticlesViewModel @Inject constructor(
         }
     }
 
-    fun goBack() =
-        router.goBack()
-
     fun goToArticle(url: String) =
-        router.goToArticle(url)
+        router.openDetailArticle(url)
 
 
 }

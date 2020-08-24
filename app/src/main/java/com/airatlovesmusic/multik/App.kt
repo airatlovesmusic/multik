@@ -1,10 +1,9 @@
 package com.airatlovesmusic.multik
 
 import android.app.Application
-import com.airatlovesmusic.global.di.dependencies.ComponentDependenciesProvider
-import com.airatlovesmusic.global.di.dependencies.HasChildDependencies
-import com.airatlovesmusic.multik.di.app.AppComponent
-import com.airatlovesmusic.multik.di.app.DaggerAppComponent
+import com.airatlovesmusic.global.di.ComponentDependenciesProvider
+import com.airatlovesmusic.global.di.HasChildDependencies
+import com.airatlovesmusic.multik.di.AppComponent
 import javax.inject.Inject
 
 /**
@@ -16,17 +15,9 @@ class App: Application(), HasChildDependencies {
     @Inject
     override lateinit var dependencies: ComponentDependenciesProvider
 
-    lateinit var appComponent: AppComponent
-
-
     override fun onCreate() {
         super.onCreate()
-        appComponent =
-            DaggerAppComponent
-                .builder()
-                .application(this)
-                .build()
-        appComponent.inject(this)
+        AppComponent.Starter.start(this).inject(this)
     }
 
 }

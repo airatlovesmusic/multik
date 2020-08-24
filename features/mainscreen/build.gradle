@@ -26,26 +26,15 @@ android {
 }
 
 dependencies {
-    implementation project (":model")
+    implementation project (":features:feature-article")
+    implementation project (":features:feature-articles")
+    implementation project (":global")
+    implementation project (":repo")
     implementation fileTree(dir: "libs", include: ["*.jar"])
-    implementation deps.external.kotlin_stdlib
-    implementation deps.androidx.core
-    implementation deps.androidx.appcompat
-    testImplementation deps.test.junit
-    androidTestImplementation deps.test.androidx_test_junit
-    androidTestImplementation deps.test.espresso_core
     implementation deps.external.dagger
     kapt deps.external.dagger_kapt
-    implementation deps.external.okhttp
-    implementation deps.external.okhttp_logging_interceptor
-    implementation deps.external.retrofit
-    implementation deps.external.retrofit_gson_adapter
-    implementation deps.external.retrofit_coroutines_adapter
 
+    implementation deps.androidx.appcompat
+    implementation deps.androidx.core
     implementation deps.external.cicerone
-
-    implementation group: 'androidx.lifecycle', name: 'lifecycle-viewmodel', version: '2.3.0-alpha07'
-}
-repositories {
-    mavenCentral()
 }
