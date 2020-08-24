@@ -1,0 +1,38 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        minSdkVersion 23
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation project (":model")
+    implementation project (":global")
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation deps.external.dagger
+    kapt deps.external.dagger_kapt
+    api deps.external.okhttp_logging_interceptor
+    api deps.external.retrofit
+    api deps.external.retrofit_gson_adapter
+    api deps.external.retrofit_coroutines_adapter
+}
