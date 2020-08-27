@@ -25,8 +25,8 @@ android {
 }
 
 dependencies {
-    implementation project (":repo")
-    implementation project (":global")
+    implementation project (":commons:repo")
+    implementation project (":commons:global")
     implementation project (':features:mainscreen')
     implementation project (':features:feature-article')
     implementation fileTree(dir: "libs", include: ["*.jar"])

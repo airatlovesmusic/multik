@@ -25,9 +25,8 @@ android {
 }
 
 dependencies {
-    implementation project(":global")
-    implementation project(":model")
-    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation project(":commons:global")
+    implementation project(":commons:model")
     implementation deps.external.kotlin_stdlib
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
     implementation deps.androidx.core

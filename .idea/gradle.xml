@@ -13,14 +13,15 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/commons" />
+            <option value="$PROJECT_DIR$/commons/global" />
+            <option value="$PROJECT_DIR$/commons/model" />
+            <option value="$PROJECT_DIR$/commons/network" />
+            <option value="$PROJECT_DIR$/commons/repo" />
             <option value="$PROJECT_DIR$/features" />
             <option value="$PROJECT_DIR$/features/feature-article" />
             <option value="$PROJECT_DIR$/features/feature-articles" />
             <option value="$PROJECT_DIR$/features/mainscreen" />
-            <option value="$PROJECT_DIR$/global" />
-            <option value="$PROJECT_DIR$/model" />
-            <option value="$PROJECT_DIR$/network" />
-            <option value="$PROJECT_DIR$/repo" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

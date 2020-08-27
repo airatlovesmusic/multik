@@ -26,10 +26,12 @@ android {
 }
 
 dependencies {
-    implementation project (":model")
-    implementation project (":network")
-    implementation project (":global")
-    implementation deps.external.kotlin_stdlib
+    implementation project (":commons:model")
+    implementation project (":commons:global")
     implementation deps.external.dagger
     kapt deps.external.dagger_kapt
+    api deps.external.okhttp_logging_interceptor
+    api deps.external.retrofit
+    api deps.external.retrofit_gson_adapter
+    api deps.external.retrofit_coroutines_adapter
 }

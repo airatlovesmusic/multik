@@ -28,9 +28,8 @@ android {
 dependencies {
     implementation project (":features:feature-article")
     implementation project (":features:feature-articles")
-    implementation project (":global")
-    implementation project (":repo")
-    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation project (":commons:global")
+    implementation project (":commons:repo")
     implementation deps.external.dagger
     kapt deps.external.dagger_kapt
 

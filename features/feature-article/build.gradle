@@ -26,17 +26,16 @@ android {
 }
 
 dependencies {
-    implementation project(":global")
-    implementation project(":model")
-    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation project(":commons:global")
+    implementation project(":commons:model")
+
     implementation deps.external.kotlin_stdlib
     implementation deps.androidx.core
     implementation deps.androidx.appcompat
-    testImplementation deps.test.junit
-    androidTestImplementation deps.test.androidx_test_junit
-    androidTestImplementation deps.test.espresso_core
+
     implementation deps.external.dagger
     kapt deps.external.dagger_kapt
+
     implementation deps.external.viewmodel_ktx
 }
 repositories {
