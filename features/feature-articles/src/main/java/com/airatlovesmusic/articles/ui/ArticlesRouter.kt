@@ -1,4 +1,4 @@
-package com.airatlovesmusic.feature1.ui
+package com.airatlovesmusic.articles.ui
 
 interface ArticlesRouter {
     fun openDetailArticle(url: String)

@@ -1,8 +1,8 @@
-package com.airatlovesmusic.feature1.di
+package com.airatlovesmusic.articles.di
 
 import androidx.fragment.app.Fragment
-import com.airatlovesmusic.feature1.ui.ArticlesFragment
-import com.airatlovesmusic.feature1.ui.ArticlesRouter
+import com.airatlovesmusic.articles.ui.ArticlesFragment
+import com.airatlovesmusic.articles.ui.ArticlesRouter
 import com.airatlovesmusic.global.di.ComponentDependencies
 import com.airatlovesmusic.global.di.DaggerComponent
 import com.airatlovesmusic.global.di.PerFeature
@@ -33,7 +33,7 @@ interface Component: DaggerComponent {
         fun create(
             @BindsInstance fragment: Fragment,
             deps: ArticlesDependencies
-        ): com.airatlovesmusic.feature1.di.Component
+        ): com.airatlovesmusic.articles.di.Component
     }
 
     fun inject(fragment: ArticlesFragment)

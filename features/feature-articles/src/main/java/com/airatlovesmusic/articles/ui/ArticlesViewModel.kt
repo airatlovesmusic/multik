@@ -1,9 +1,8 @@
-package com.airatlovesmusic.feature1.ui
+package com.airatlovesmusic.articles.ui
 
 import androidx.lifecycle.MutableLiveData
 import com.airatlovesmusic.global.base.BaseViewModel
 import androidx.lifecycle.viewModelScope
-import com.airatlovesmusic.global.data.system.FlowRouter
 import com.airatlovesmusic.global.interfaces.ArticlesRepository
 import com.airatlovesmusic.model.Article
 import kotlinx.coroutines.Dispatchers

@@ -1,16 +1,16 @@
-package com.airatlovesmusic.feature1.ui
+package com.airatlovesmusic.articles.ui
 
 import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.airatlovesmusic.feature1.R
-import com.airatlovesmusic.feature1.di.Component
-import com.airatlovesmusic.feature1.di.DaggerComponent
-import com.airatlovesmusic.feature1.ui.adapter.ArticlesAdapter
+import com.airatlovesmusic.articles.R
+import com.airatlovesmusic.articles.di.Component
+import com.airatlovesmusic.articles.di.DaggerComponent
 import com.airatlovesmusic.global.base.BaseFragment
 import com.airatlovesmusic.global.di.findComponentDependencies
+import com.airatlovesmusic.lists.articles.ArticlesAdapter
 import kotlinx.android.synthetic.main.fragment_articles.*
 import javax.inject.Inject
 

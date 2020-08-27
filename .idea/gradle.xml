@@ -15,6 +15,7 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/commons" />
             <option value="$PROJECT_DIR$/commons/global" />
+            <option value="$PROJECT_DIR$/commons/lists" />
             <option value="$PROJECT_DIR$/commons/model" />
             <option value="$PROJECT_DIR$/commons/network" />
             <option value="$PROJECT_DIR$/commons/repo" />

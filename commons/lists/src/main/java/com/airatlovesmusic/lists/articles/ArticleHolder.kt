@@ -1,4 +1,4 @@
-package com.airatlovesmusic.feature1.ui.adapter
+package com.airatlovesmusic.lists.articles
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
