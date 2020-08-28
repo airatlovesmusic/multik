@@ -27,6 +27,16 @@ def test = [
         espresso_core: "androidx.test.espresso:espresso-core:3.2.0"
 ]
 
+def config = [
+        build       : [
+                buildToolsVersion: '29.0.3',
+                compileSdkVersion: 30,
+                minSdkVersion    : 23,
+                targetSdkVersion : 30
+        ],
+        gradlePlugin: 'com.android.tools.build:gradle:4.0.1'
+]
+
 def androidx = [
         appcompat: "androidx.appcompat:appcompat:1.2.0",
         core: "androidx.core:core-ktx:1.3.1"
@@ -36,5 +46,6 @@ ext.deps = [
         "external": external,
         "versions": versions,
         "test": test,
-        "androidx": androidx
+        "androidx": androidx,
+        "config": config
 ]
