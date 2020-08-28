@@ -17,7 +17,12 @@ class App: Application(), HasChildDependencies {
 
     override fun onCreate() {
         super.onCreate()
-        AppComponent.Starter.start(this).inject(this)
+        appComponent = AppComponent.Starter.start(this)
+        appComponent.inject(this)
+    }
+
+    companion object {
+        lateinit var appComponent: AppComponent
     }
 
 }

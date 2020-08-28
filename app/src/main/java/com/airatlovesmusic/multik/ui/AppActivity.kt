@@ -44,9 +44,7 @@ class AppActivity: AppCompatActivity() {
         }
     }
 
-    private val appComponent by lazy {
-        AppComponent.Starter.start(application as App)
-    }
+    private val appComponent by lazy { App.appComponent }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         appComponent.inject(this)
