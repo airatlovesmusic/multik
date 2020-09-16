@@ -1,4 +1,4 @@
-package com.airatlovesmusic.template
+package com.airatlovesmusic.template.ui
 
 import android.os.Bundle
 import com.airatlovesmusic.global.base.BaseFragment
