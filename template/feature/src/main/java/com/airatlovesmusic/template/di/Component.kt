@@ -1,4 +1,4 @@
-package com.airatlovesmusic.$1.di
+package com.airatlovesmusic.template.di
 
 import com.airatlovesmusic.global.data.system.FlowRouter
 import com.airatlovesmusic.global.di.*

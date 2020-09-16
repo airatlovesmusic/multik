@@ -1,9 +1,9 @@
-package com.airatlovesmusic.$1
+package com.airatlovesmusic.template
 
 import android.os.Bundle
 import com.airatlovesmusic.global.base.BaseFragment
 import com.airatlovesmusic.global.di.findComponentDependencies
-import com.airatlovesmusic.$1.di.MainFlowComponent
+import com.airatlovesmusic.template.di.MainFlowComponent
 import ru.terrakok.cicerone.NavigatorHolder
 import javax.inject.Inject
 
