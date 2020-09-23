@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="Multik.app" target="1.8" />
+      <module name="Multik.commons.global" target="1.8" />
+      <module name="Multik.commons.lists" target="1.8" />
+      <module name="Multik.commons.model" target="1.8" />
+      <module name="Multik.commons.network" target="1.8" />
+      <module name="Multik.commons.repo" target="1.8" />
+      <module name="Multik.features.feature-article" target="1.8" />
+      <module name="Multik.features.feature-articles" target="1.8" />
+      <module name="Multik.features.mainscreen" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

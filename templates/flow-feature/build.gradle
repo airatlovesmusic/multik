@@ -1,0 +1,36 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion deps.config.build.compileSdkVersion
+    buildToolsVersion deps.config.build.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion deps.config.build.minSdkVersion
+        targetSdkVersion deps.config.build.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation project (":features:feature-article")
+    implementation project (":features:feature-articles")
+    implementation project (":commons:global")
+    implementation project (":commons:repo")
+    implementation deps.external.dagger
+    kapt deps.external.dagger_kapt
+
+    implementation deps.androidx.appcompat
+    implementation deps.androidx.core
+    implementation deps.external.cicerone
+}
