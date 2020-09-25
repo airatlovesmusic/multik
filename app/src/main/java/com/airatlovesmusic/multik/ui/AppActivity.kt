@@ -1,6 +1,8 @@
 package com.airatlovesmusic.multik.ui
 
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
@@ -41,6 +43,14 @@ class AppActivity: AppCompatActivity() {
             fragmentTransaction: FragmentTransaction
         ) {
             fragmentTransaction.setReorderingAllowed(true)
+        }
+
+        override fun errorOnApplyCommand(command: Command, error: RuntimeException) {
+            super.errorOnApplyCommand(command, error)
+            Handler(Looper.getMainLooper()).postDelayed(
+                { applyCommand(command) },
+                100
+            )
         }
     }
 

@@ -1,6 +1,5 @@
 package com.airatlovesmusic.mainscreen.ui
 
-import android.os.Bundle
 import com.airatlovesmusic.global.base.FlowFragment
 import com.airatlovesmusic.global.di.ComponentDependenciesProvider
 import com.airatlovesmusic.global.di.HasChildDependencies
@@ -22,6 +21,8 @@ class MainFragment: FlowFragment(), HasChildDependencies {
         }
     }
 
+
+
     @Inject
     override lateinit var dependencies: ComponentDependenciesProvider
 
@@ -30,9 +31,9 @@ class MainFragment: FlowFragment(), HasChildDependencies {
 
     override fun getLaunchScreen() = Screens.Articles
 
-    override fun onCreate(savedInstanceState: Bundle?) {
+    override fun initComponent() {
         getComponent<MainFlowComponent>().inject(this)
-        super.onCreate(savedInstanceState)
     }
+
 
 }

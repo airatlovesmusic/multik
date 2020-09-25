@@ -32,9 +32,8 @@ class ArticlesFragment: BaseFragment() {
         ArticlesAdapter { viewModel.goToArticle(it.url) }
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
+    override fun initComponent() {
         getComponent<Component>().inject(this)
-        super.onCreate(savedInstanceState)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

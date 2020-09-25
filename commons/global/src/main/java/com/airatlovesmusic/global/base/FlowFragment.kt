@@ -21,12 +21,12 @@ abstract class FlowFragment : BaseFragment() {
     @Inject lateinit var router: Router
 
     private val currentFragment
-        get() = childFragmentManager.findFragmentById(R.id.content) as? BaseFragment
+        get() = childFragmentManager.findFragmentById(R.id.container) as? BaseFragment
 
     abstract val navigatorHolder: NavigatorHolder
 
     private val navigator: Navigator by lazy {
-        object : SupportAppNavigator(requireActivity(), childFragmentManager, R.id.content) {
+        object : SupportAppNavigator(requireActivity(), childFragmentManager, R.id.container) {
             override fun activityBack() = router.exit()
             override fun setupFragmentTransaction(
                 command: Command,

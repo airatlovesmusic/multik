@@ -1,6 +1,6 @@
 package com.airatlovesmusic.mainscreen
 
-import com.airatlovesmusic.feature1.ui.ArticlesFragment
+import com.airatlovesmusic.articles.ui.ArticlesFragment
 import com.airatlovesmusic.feature_article.ui.DetailArticleFragment
 import ru.terrakok.cicerone.android.support.SupportAppScreen
 
