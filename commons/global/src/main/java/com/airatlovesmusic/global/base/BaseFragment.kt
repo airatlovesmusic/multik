@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import com.airatlovesmusic.global.di.ComponentManager
 import com.airatlovesmusic.global.di.DaggerComponent
 import com.airatlovesmusic.global.di.HasChildDependencies
+import ru.startted.utils.objectScopeName
 
 abstract class BaseFragment : Fragment() {
 
@@ -66,5 +67,3 @@ abstract class BaseFragment : Fragment() {
     }
 
 }
-
-fun Any.objectScopeName() = "${javaClass.simpleName}_${hashCode()}"

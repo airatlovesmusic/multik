@@ -24,6 +24,7 @@ android {
 
 dependencies {
     implementation project (":commons:model")
+    implementation project (":commons:utils")
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation deps.external.kotlin_stdlib
     implementation deps.androidx.core
