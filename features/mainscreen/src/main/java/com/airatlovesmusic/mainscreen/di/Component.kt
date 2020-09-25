@@ -1,7 +1,7 @@
 package com.airatlovesmusic.mainscreen.di
 
-import com.airatlovesmusic.feature1.di.ArticlesDependencies
-import com.airatlovesmusic.feature1.ui.ArticlesRouter
+import com.airatlovesmusic.articles.di.ArticlesDependencies
+import com.airatlovesmusic.articles.ui.ArticlesRouter
 import com.airatlovesmusic.feature_article.di.ArticleDependencies
 import com.airatlovesmusic.feature_article.ui.ArticleRouter
 import com.airatlovesmusic.global.data.system.FlowRouter
